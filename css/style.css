@@ -1,0 +1,184 @@
+.cookie-banner {
+  margin: auto;
+  margin-top: 100px;
+  width: 45%;
+  max-height: 420px;
+  overflow: auto;
+  position: relative;
+}
+
+.cookie-banner__body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: black;
+  color: #cccbcb;
+  padding: 6%;
+  position: relative;
+  font-size: 15px;
+  font-family: Lucida Courier monospace serif;
+  line-height: 1.5;
+  word-spacing: 3px;
+  position: relative;
+}
+
+.cookie-banner__close-button {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  height: 15px;
+  width: 15px;
+}
+
+.cookie-banner__close-button:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.cookie-banner__paragraph {
+  vertical-align: baseline;
+  margin-bottom: 16px;
+}
+
+.cookie-banner__paragraph a {
+  color: inherit;
+}
+
+.cookie-banner__paragraph a:hover {
+  color: white;
+}
+
+.cookie-banner__outer {
+  padding: 14px;
+  position: relative;
+}
+
+.cookie-banner__outer::before {
+  position: absolute;
+  content: "";
+  width: 98%;
+  left: 3px;
+  top: 0;
+  display: block;
+  height: 16px;
+  background: url("../icons/deco1.svg") 50% 0;
+}
+
+.cookie-banner__outer::after {
+  position: absolute;
+  content: "";
+  width: 98%;
+  bottom: 0;
+  left: 3px;
+  display: block;
+  height: 16px;
+  background: url("../icons/deco1.svg") 50% 0;
+}
+
+.cookie-banner__inner {
+  padding: 14px;
+  position: relative;
+}
+
+.cookie-banner__inner::after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -20px;
+  content: "";
+  display: block;
+  width: 14px;
+  height: 100%;
+  background: url("../icons/deco2.svg") 50% 0;
+}
+
+.cookie-banner__inner::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -15px;
+  content: "";
+  display: block;
+  width: 14px;
+  height: 100%;
+  background: url("../icons/deco2.svg") 50% 0;
+}
+
+.cookie-banner__button {
+  display: inline-block;
+  margin-right: 30px;
+}
+
+.cookie-banner__button:hover {
+  cursor: pointer;
+  color: white;
+}
+
+.prompt-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  height: 20px;
+  overflow: hidden;
+}
+
+.prompt-box__label {
+  -ms-flex-preferred-size: 50px;
+      flex-basis: 50px;
+}
+
+.prompt-box__input {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  z-index: 1;
+  border: none;
+  color: white;
+  opacity: 0;
+  background: transparent;
+}
+
+.prompt-box__input:focus-within .carret {
+  background: white;
+}
+
+.prompt-box input:focus {
+  outline: none;
+}
+
+.prompt-box input:hover {
+  cursor: pointer;
+}
+
+.prompt-box__fake-input {
+  display: inline-block;
+  -ms-flex-preferred-size: 85%;
+      flex-basis: 85%;
+  height: 100%;
+  min-width: 85%;
+  background: inherit;
+  position: absolute;
+  padding-left: 2px;
+  bottom: 0;
+  left: 50px;
+  z-index: 0;
+  color: white;
+  max-width: 85%;
+}
+
+.prompt-box__carret {
+  display: inline-block;
+  height: 100%;
+  width: 7px;
+  background: black;
+  position: relative;
+  left: -7px;
+}
+
+.prompt-box__text {
+  display: inline-block;
+  position: relative;
+  height: 100%;
+  bottom: 4px;
+}
+/*# sourceMappingURL=style.css.map */

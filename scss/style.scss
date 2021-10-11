@@ -1,0 +1,171 @@
+$text_color:#cccbcb;
+$highlight_color:white;
+$bg_color:black;
+
+
+.cookie-banner {
+    margin: auto;
+    margin-top: 100px;
+    width: 45%;
+    max-height: 420px;
+    overflow:auto;  
+    position: relative;
+    &__body {
+        box-sizing: border-box;
+        background: $bg_color;
+        color: $text_color;
+        padding: 6% ;
+        position: relative;
+        font-size: 15px;
+        font-family: Lucida Courier monospace serif;
+        line-height: 1.5;
+        word-spacing: 3px;
+        position: relative;
+    }
+    &__close-button{
+        position: absolute;
+        top:5px;
+        left:5px;
+        height: 15px;
+        width:15px;
+    }
+    &__close-button:hover{
+        color: $highlight_color;
+        cursor: pointer;
+    }
+
+
+    &__paragraph {
+        vertical-align: baseline;
+        margin-bottom: 16px;
+        a{
+            color:inherit;
+        }
+        a:hover{
+            color:$highlight_color
+        }
+    }
+   
+
+    &__outer {
+        padding: 14px;
+        position: relative;
+    }
+    &__outer::before{
+        position: absolute;
+        content: "";
+        width: 98%;
+        left: 3px;
+        top:0;
+        display: block;
+        height: 16px;
+        background: url("../icons/deco1.svg") 50% 0;
+    }
+
+    &__outer::after{
+        position: absolute;
+        content: "";
+        width: 98%;
+        bottom:0;
+        left:3px;
+        display: block;
+        height: 16px;
+        background: url("../icons/deco1.svg") 50% 0;
+    }
+    &__inner {
+        padding: 14px;
+        position: relative;
+    }
+    
+    &__inner::after{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right:-20px;
+        content: "";
+        display: block;
+        width: 14px;
+        height: 100%;
+        background: url("../icons/deco2.svg") 50% 0;
+      
+    }
+    &__inner::before{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left:-15px;
+        content: "";
+        display: block;
+        width: 14px;
+        height: 100%;
+        background: url("../icons/deco2.svg") 50% 0;
+      
+    }
+    &__button {
+        display: inline-block;
+        margin-right: 30px;
+    }
+    &__button:hover{
+        cursor: pointer;
+        color: $highlight_color;
+    }
+}
+.prompt-box {
+    display: flex;
+    position: relative;
+    height: 20px;
+    overflow: hidden;
+    &__label {
+        flex-basis: 50px;
+    }
+
+    &__input {
+       flex-grow: 1;
+       z-index: 1;
+       border: none;
+       color: white;
+       opacity: 0;
+       background: transparent;
+    }
+    &__input:focus-within{
+        .carret{
+            background: white;
+        }
+    }
+    
+    input:focus{
+        outline: none;
+    }
+    input:hover{
+        cursor: pointer;
+    }
+   
+    &__fake-input{
+        display: inline-block;
+        flex-basis: 85%;
+        height: 100%;
+        min-width: 85%;
+        background: inherit;
+        position: absolute;
+        padding-left: 2px;
+        bottom: 0;
+        left:50px;
+        z-index: 0;
+        color: white;
+        max-width: 85%;
+    }
+    &__carret{
+        display: inline-block;
+        height: 100%;
+        width: 7px;
+        background: $bg_color;
+        position: relative;
+        left: -7px;
+    }
+    &__text{
+        display: inline-block;
+        position: relative;
+        height: 100%;
+        bottom: 4px;
+    }
+}
